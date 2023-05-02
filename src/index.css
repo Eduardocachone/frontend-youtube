@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+*{
+  scrollbar-width: 10px;
+  scrollbar-color: #8c8c8c;
+  
+}
+
+/* Estilizando a barra de rolagem vertical do Opera GX */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #b6b6b6;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777373;
+}
+
+
