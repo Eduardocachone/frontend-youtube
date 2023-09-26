@@ -27,7 +27,7 @@ import Login from '../../pages/Login/Login';
 
 function Header (){
 
-const {Aberto, setAberto, login,user} = useContext(UserContext);
+const {Aberto, setAberto, login,user, logOut} = useContext(UserContext);
 
 const navigate = useNavigate()
 
@@ -87,6 +87,7 @@ const navigate = useNavigate()
                 </span>
                 </ContainerLogin>
                 }
+                <button onClick={() => {logOut()}} >sair</button>
             </HeaderButton>
 
 

@@ -5,10 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 function Senha() {
 
-  const { setHeaderconponent , setMenuconponent} = useContext(UserContext);
-
-
-
+  const { setHeaderconponent , setMenuconponent, login} = useContext(UserContext)
+  
   useEffect(() => {
     setHeaderconponent(false);
 
@@ -25,25 +23,35 @@ function Senha() {
     };
   }, []); 
 
-  const {  handleLogin, logOut } = useContext(UserContext);
-  const [password, setPassword] = useState('')
+  const {  handleLogin } = useContext(UserContext);
+
+  const [password, setPassword] = useState("");
 
   const navigate = useNavigate()
 
-  const valor = localStorage.getItem("email");
+  
 
-  const click = () => {
-    handleLogin(valor,password)
-    navigate('/')
-  }
+  const Email = localStorage.getItem("email");
 
+
+
+  const handlelogar = (event:any) => {
+    event.preventDefault();
+
+    handleLogin(Email,password)
+    if (login) {   
+      navigate('/')
+    }
+
+  };
 
 
   return (
     <div>
+
       <label htmlFor="password">Senha:</label>
       <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={() => {click()}} >logar</button>
+      <button onClick={handlelogar} >logar</button>
   
     </div>
   );

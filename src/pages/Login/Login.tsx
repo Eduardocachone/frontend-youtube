@@ -43,14 +43,14 @@ function Email() {
 
   const handleSaveClick = (event:any) => {
     localStorage.setItem("email", email);
-    event.preventDefault(); // impedir o envio do formulário
+    event.preventDefault();
 
     if (!email) {
       setMensagem("Digite um e-mail ou numero de telefone");
       return;
     }
 
-    setMensagem(""); // limpar a mensagem de erro
+    setMensagem(""); 
     navigate('/senha')
   };
 
@@ -80,7 +80,7 @@ function Email() {
       </Styles3>
 
       <Styles4>
-      <span className="cadastro" onClick={() => {navigate('/cadastro')}} >Criar senha</span>
+      <span className="cadastro" onClick={() => {navigate('/cadastro')}} >Criar conta</span>
       <button className="proximo" type="submit" onClick={handleSaveClick}>Proximo</button>
       </Styles4>
     </Container>

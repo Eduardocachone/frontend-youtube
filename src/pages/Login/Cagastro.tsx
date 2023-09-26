@@ -26,16 +26,13 @@ function Cadastro() {
   }, []); 
 
 
-  const {  handleCreate, logOut } = useContext(UserContext);
+  const {  handleCreate} = useContext(UserContext);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");  
   const [password, setPassword] = useState('')
 
   const navigate = useNavigate()
-
-
-
 
   return (
     <div>
